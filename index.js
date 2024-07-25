@@ -3,7 +3,7 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 5000;
 const restaurantRouter = require("./routers/restaurant.router");
-const authRoter= require("./routers/auth.router")
+const authRouter= require("./routers/auth.router")
 const db = require("./models/")
 const role = db.Role;
 
@@ -25,7 +25,7 @@ app.use(express.urlencoded({extended: true}));
 
 //use router
 app.use("/api/v1/restaurants", restaurantRouter);
-app.use("/api/v1/auth", authRoter);
+app.use("/api/v1/auth", authRouter);
 
 app.get("/", (req, res) => {
   res.send("<h1>Hello Restaurant API</h1>");

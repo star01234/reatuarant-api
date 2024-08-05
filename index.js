@@ -25,7 +25,7 @@ const initRole = () => {
 };
 
 //use maideware
-//app.use(cors(corsOption));
+app.use(cors(corsOption));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

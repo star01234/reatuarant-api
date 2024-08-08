@@ -42,9 +42,10 @@ checkRolesExisted = async (req, res, next) => {
       }
       next();
     });
+  } else {
+    next();
   }
 };
-
 const verifySignUp = {
   checkRolesExisted,
   checkDuplicateUsernameOrEmail,

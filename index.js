@@ -9,7 +9,7 @@ const role = db.Role;
 const cors = require("cors");
 
 const corsOption = {
-  origin: "http://localhost:5173/",
+  origin: "http://localhost:5173",
 };
 
 //Dev mode
